@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-primary-50: #e6f0fa;
+    --color-primary-100: #cce0f5;
+    --color-primary-200: #99c2eb;
+    --color-primary-300: #66a3e0;
+    --color-primary-400: #3385d6;
+    --color-primary-500: #0c498e;
+    --color-primary-600: #0a3a70;
+    --color-primary-700: #08305a;
+    --color-primary-800: #061d40;
+    --color-primary-900: #04122c;
+
+    --color-orange-50: #fff5e6;
+    --color-orange-100: #ffe6cc;
+    --color-orange-200: #ffd699;
+    --color-orange-300: #ffc766;
+    --color-orange-400: #ffb733;
+    --color-orange-500: #f18e06;
+    --color-orange-600: #cc7405;
+    --color-orange-700: #995503;
+    --color-orange-800: #663702;
+    --color-orange-900: #331b01;
+
+    --color-sky-50:  #f4f8fa;
+    --color-sky-100: #e1eef4;
+    --color-sky-200: #c3dde9;
+    --color-sky-300: #a5cce0;
+    --color-sky-400: #86bad6;
+    --color-sky-500: #9bb9c6; 
+    --color-sky-600: #7b9fac;
+    --color-sky-700: #5b8592;
+    --color-sky-800: #3b6b78;
+    --color-sky-900: #1c505e;
+
+    --color-red-500: #d32329;
+    --color-red-600: #b21d20;
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f4f4f5;
+    --color-zinc-200: #e4e4e7;
+    --color-zinc-300: #d4d4d8;
+    --color-zinc-400: #a1a1aa;
+    --color-zinc-500: #71717a;
+    --color-zinc-600: #52525b;
+    --color-zinc-700: #3f3f46;
+    --color-zinc-800: #27272a;
+    --color-zinc-900: #18181b;
+    --color-zinc-950: #09090b;
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --background: #f9fafb;
+    --foreground: #1f2937;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --color-blue-50: var(--color-primary-50);
+  --color-blue-100: var(--color-primary-100);
+  --color-blue-200: var(--color-primary-200);
+  --color-blue-300: var(--color-primary-300);
+  --color-blue-400: var(--color-primary-400);
+  --color-blue-500: var(--color-primary-500);
+  --color-blue-600: var(--color-primary-600);
+  --color-blue-700: var(--color-primary-700);
+  --color-blue-800: var(--color-primary-800);
+  --color-blue-900: var(--color-primary-900);
+
+  --color-orange-50: var(--color-orange-50);
+  --color-orange-100: var(--color-orange-100);
+  --color-orange-200: var(--color-orange-200);
+  --color-orange-300: var(--color-orange-300);
+  --color-orange-400: var(--color-orange-400);
+  --color-orange-500: var(--color-orange-500);
+  --color-orange-600: var(--color-orange-600);
+  --color-orange-700: var(--color-orange-700);
+  --color-orange-800: var(--color-orange-800);
+  --color-orange-900: var(--color-orange-900);
+
+  --color-sky-50: var(--color-sky-50);
+  --color-sky-100: var(--color-sky-100);
+  --color-sky-200: var(--color-sky-200);
+  --color-sky-300: var(--color-sky-300);
+  --color-sky-400: var(--color-sky-400);
+  --color-sky-500: var(--color-sky-500);
+  --color-sky-600: var(--color-sky-600);
+  --color-sky-700: var(--color-sky-700);
+  --color-sky-800: var(--color-sky-800);
+  --color-sky-900: var(--color-sky-900);
+
+  --color-red-500: var(--color-red-500);
+  --color-red-600: var(--color-red-600);
+
+  --color-zinc-50: var(--color-zinc-50);
+  --color-zinc-100: var(--color-zinc-100);
+  --color-zinc-200: var(--color-zinc-200);
+  --color-zinc-300: var(--color-zinc-300);
+  --color-zinc-400: var(--color-zinc-400);
+  --color-zinc-500: var(--color-zinc-500);
+  --color-zinc-600: var(--color-zinc-600);
+  --color-zinc-700: var(--color-zinc-700);
+  --color-zinc-800: var(--color-zinc-800);
+  --color-zinc-900: var(--color-zinc-900);
+  --color-zinc-950: var(--color-zinc-950);
+    
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --font-title-xl: var(--font-tt-bluescreens-42);
+  --font-title-lg: var(--font-tt-bluescreens-32);
+  --font-title-md: var(--font-tt-bluescreens-24);
+  --font-body: var(--font-calibri-16);
 }
